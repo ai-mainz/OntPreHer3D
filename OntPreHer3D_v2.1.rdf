@@ -1,0 +1,1168 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/"
+     xml:base="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/"
+     xmlns:oph="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/">
+        <owl:imports rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/"/>
+        <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <owl:imports rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/"/>
+        <owl:imports rdf:resource="http://www.cidoc-crm.org/extensions/crminf/"/>
+        <owl:imports rdf:resource="https://www.ontscidoc3d.hs-mainz.de/ontology/"/>
+        <rdfs:comment xml:lang="en">Changelog: https://github.com/igorbajena/OntPreHer3D/</rdfs:comment>
+        <rdfs:comment xml:lang="en">Ontology for Preservation of Cultural Heritage 3D models (OntPreHer3D) version 2.0
+
+Compatible with:
+ECRM 211015 (CIDOC CRM 7.1.3.)
+CRMdig version 3.2.1.
+OntSciDoc3D version 2.0
+
+The ontology was developed by Igor Bajena as part of his PhD dissertation about the documentation and publication of hypothetical digital 3D reconstructions of lost or never-built architectural heritage. 
+
+This implementation was created in collaboration with partners of an EU-funded project of Computer-based Visualization of Architectural Cultural Heritage (CoVHer, https://covher.eu/) from Italy (University of Bologna), Germany (Hochschule Mainz-University of Applied Sciences &amp; Interessengemeinschaft für Semantische Datenverarbeitung e.V.), Poland (Warsaw University of Technology), Spain (Universitat Autònoma de Barcelona &amp; La Tempesta: City, culture &amp; technology) and Portugal (Faculdade de Arquitectura Universidade do Porto). The development process was supported by Mark Fichtner, Peggy Große, and Robert Nasarek.</rdfs:comment>
+        <rdfs:label xml:lang="en">OntPreHer3D version 2.0</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R10_simulates -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R10_simulates">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R10i_is_simulated_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M19_Simulation"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+        <rdfs:comment xml:lang="en">Quantification:
+one to one, necessary (1,1:0,1)
+
+Scope note:
+This property associates the instance of M19 Simulation with the simulated object represented by the instance of M26 Cultural Heritage Thing, which is digitally reconstructed on the M1 3D Object.</rdfs:comment>
+        <rdfs:label xml:lang="en">R10 simulates</rdfs:label>
+        <skos:notation xml:lang="en">R10</skos:notation>
+        <skos:prefLabel xml:lang="en">simulates</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R10i_is_simulated_by -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R10i_is_simulated_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M19_Simulation"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+one to one, necessary (1,1:0,1)
+
+Scope note of the inverse property:
+This property associates the instance of M19 Simulation with the simulated object represented by the instance of M26 Cultural Heritage Thing, which is digitally reconstructed on the M1 3D Object.</rdfs:comment>
+        <rdfs:label xml:lang="en">R10i is simulated by</rdfs:label>
+        <skos:notation>R10i</skos:notation>
+        <skos:prefLabel xml:lang="en">is simulated by</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R11_simulates_object -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R11_simulates_object">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R11i_is_object_simulated_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+        <rdfs:label xml:lang="en">R11 simulates object</rdfs:label>
+        <skos:notation xml:lang="en">Quantification:
+many to one, necessary (1,1:0,n)
+
+Scope note:
+This property identifies an instance of M26 Cultural Heritage Thing that is simulated by M1 3D Object. Simulating is meant in the sense that an instance of M26 Cultural Heritage Thing intentionally shows, through its optical qualities or form, a representation of the entity simulated. Digital 3D scans are, by default, regarded as being intentional in this sense.
+
+This property is a shortcut of the more fully developed path from M26 Cultural Heritage Thing through R10 is simulated by, M19 Simulation, L11 had an output to M1 3D Object.</skos:notation>
+        <skos:notation>R11</skos:notation>
+        <skos:prefLabel xml:lang="en">simulates object</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R11i_is_object_simulated_by -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R11i_is_object_simulated_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:label xml:lang="en">R11i is object simulated by</rdfs:label>
+        <skos:notation xml:lang="en">Quantification of the inverse property:
+many to one, necessary (1,1:0,n)
+
+Scope note of the inverse property:
+This property identifies an instance of M26 Cultural Heritage Thing that is simulated by M1 3D Object. Simulating is meant in the sense that an instance of M26 Cultural Heritage Thing intentionally shows, through its optical qualities or form, a representation of the entity simulated. Digital 3D scans are, by default, regarded as being intentional in this sense.
+
+This property is a shortcut of the more fully developed path from M26 Cultural Heritage Thing through R10 is simulated by, M19 Simulation, L11 had an output to M1 3D Object.</skos:notation>
+        <skos:notation>R11i</skos:notation>
+        <skos:prefLabel xml:lang="en">is object simulated by</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12_embeds -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12_embeds">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12i_is_embedded_in"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M17_Digital_Environment"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:label xml:lang="en">R12 embeds</rdfs:label>
+        <skos:notation xml:lang="en">Quantification:
+many to many (0,n:0,n)
+
+Scope note:
+This property associates the instance of M1 3D Object with an instance of M17 Digital Environment, where the 3D model is embedded. Creating a derived 3D Object by exporting to other file formats (D1 Digital Object) also creates new instances of D17 Digital Environment based on the specification of the exported file format, where the M1 3D Object is embedded.</skos:notation>
+        <skos:notation>R12</skos:notation>
+        <skos:prefLabel xml:lang="en">embeds</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12_refers_to_coordinate_system_within -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12_refers_to_coordinate_system_within">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12i_has_coordinate_system_referred_to"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M18_Digital_Position"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M17_Digital_Environment"/>
+        <rdfs:label xml:lang="en">R12 refers to coordinate system within</rdfs:label>
+        <skos:notation>R12</skos:notation>
+        <skos:prefLabel xml:lang="en">Quantification:
+many to one, necessary (1,1:0,n)
+
+Scope note:
+This property associates the instance of M18 Digital Position in relation to the coordinate system of the instance of M1 Digital Environment to which it refers to.</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">refers to coordinate system within</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12i_has_coordinate_system_referred_to -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12i_has_coordinate_system_referred_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M17_Digital_Environment"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M18_Digital_Position"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+many to one, necessary (1,1:0,n)
+
+Scope note of the inverse property:
+This property associates the instance of M18 Digital Position in relation to the coordinate system of the instance of M1 Digital Environment to which it refers to.</rdfs:comment>
+        <rdfs:label xml:lang="en">R12i has coordinate system referred to</rdfs:label>
+        <skos:notation>R12i</skos:notation>
+        <skos:prefLabel xml:lang="en">has coordinate system referred to</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12i_is_embedded_in -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R12i_is_embedded_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M17_Digital_Environment"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+many to many (0,n:0,n)
+
+Scope note of the inverse property:
+This property associates the instance of M1 3D Object with an instance of M17 Digital Environment, where the 3D model is embedded. Creating a derived 3D Object by exporting to other file formats (D1 Digital Object) also creates new instances of D17 Digital Environment based on the specification of the exported file format, where the M1 3D Object is embedded.</rdfs:comment>
+        <rdfs:label xml:lang="en">R12i is embedded in</rdfs:label>
+        <skos:notation>R12i</skos:notation>
+        <skos:prefLabel xml:lang="en">is embedded in</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R13_consist_of -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R13_consist_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R13i_is_incorporated_in"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M16_Digital_Material"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M22_Digital_Shape"/>
+        <rdfs:comment xml:lang="en">Quantification:
+many to many, necessary (1,n:0,n)
+
+Scope note:
+This property identifies the instance of M1 3D Object or M15 Digital Feature with its attributes of shape (M22 Digital Shape) and material (M16 Digital Material). All digital 3D things simulate visually 2D or 3D shapes and volumes with a surface-specific perception expressed by digital materials. R12 consists of (is incorporated in) allows the different digital materials and different shapes to be recorded.</rdfs:comment>
+        <rdfs:label xml:lang="en">R13 consists of</rdfs:label>
+        <skos:notation>R13</skos:notation>
+        <skos:prefLabel xml:lang="en">consists of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R13i_is_incorporated_in -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R13i_is_incorporated_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M16_Digital_Material"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M22_Digital_Shape"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+many to many, necessary (1,n:0,n)
+
+Scope note of the inverse property:
+This property identifies the instance of M1 3D Object or M15 Digital Feature with its attributes of shape (M22 Digital Shape) and material (M16 Digital Material). All digital 3D things simulate visually 2D or 3D shapes and volumes with a surface-specific perception expressed by digital materials. R12 consists of (is incorporated in) allows the different digital materials and different shapes to be recorded.</rdfs:comment>
+        <rdfs:label xml:lang="en">R13i is incorporated in</rdfs:label>
+        <skos:notation>R13i</skos:notation>
+        <skos:prefLabel xml:lang="en">is incorporated in</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R14_has_reconstructed -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R14_has_reconstructed">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R14i_is_reconstructed_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M25_Digital_Reconstruction"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+        <rdfs:label xml:lang="en">R14 has reconstructed</rdfs:label>
+        <skos:notation xml:lang="en">Quantification:
+many to many (0,n:0,n)
+
+Scope note:
+This property associates an instance of M25 Digital Reconstruction with the instance of M26 Cultural Heritage Thing about which it made a reconstruction. One cultural object can be the subject of multiple instances of digital reconstructions conducted by different actors in different times and environments.</skos:notation>
+        <skos:notation>R14</skos:notation>
+        <skos:prefLabel xml:lang="en">has reconstructed</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R14i_is_reconstructed_by -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R14i_is_reconstructed_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M25_Digital_Reconstruction"/>
+        <rdfs:label xml:lang="en">R14i is reconstructed by</rdfs:label>
+        <skos:notation>R14i</skos:notation>
+        <skos:prefLabel xml:lang="en">Quantification of the inverse property:
+many to many (0,n:0,n)
+
+Scope note of the inverse property:
+This property associates an instance of M25 Digital Reconstruction with the instance of M26 Cultural Heritage Thing about which it made a reconstruction. One cultural object can be the subject of multiple instances of digital reconstructions conducted by different actors in different times and environments.</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">is reconstructed by</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R15_simulates_time -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R15_simulates_time">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R15i_is_time_simulated_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M25_Digital_Reconstruction"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:comment xml:lang="en">Quantification:
+one to one, necessary (1,1:0,1)
+
+Scope note:
+This property associates an instance of M25 Digital Reconstruction with the instance of E52 Time Span about which it made a reconstruction. Each digital reconstruction of an object matches only a certain time span from the object&apos;s lifespan, which this property allows to document.</rdfs:comment>
+        <rdfs:label xml:lang="en">R15 simulates time</rdfs:label>
+        <skos:notation>R15</skos:notation>
+        <skos:prefLabel xml:lang="en">simulates time</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R15i_is_time_simulated_by -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R15i_is_time_simulated_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M25_Digital_Reconstruction"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+one to one, necessary (1,1:0,1)
+
+Scope note of the inverse property:
+This property associates an instance of M25 Digital Reconstruction with the instance of E52 Time Span about which it made a reconstruction. Each digital reconstruction of an object matches only a certain time span from the object&apos;s lifespan, which this property allows to document.</rdfs:comment>
+        <rdfs:label xml:lang="en">R15i is time simulated by</rdfs:label>
+        <skos:notation>R15i</skos:notation>
+        <skos:prefLabel xml:lang="en">is time simulated by</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R16_has_shape -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R16_has_shape">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R16i_is_shape_of"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M21_Shape"/>
+        <rdfs:comment xml:lang="en">Quantification:
+many to many, necessary (1,n:0,n) 
+
+Scope note:
+This property identifies the instances of M21 Shape that match the outline of an instance of M26 Cultural Heritage Thing. In the case of physical things, this property describes the physical boundaries of the object. In the case of conceptual objects, this property refers to the boundaries deduced from the interpretation of the carriers of a given concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">R16 has shape</rdfs:label>
+        <skos:notation>R16</skos:notation>
+        <skos:prefLabel xml:lang="en">has shape</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R16i_is_shape_of -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R16i_is_shape_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M21_Shape"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+many to many, necessary (1,n:0,n) 
+
+Scope note of the inverse property:
+This property identifies the instances of M21 Shape that match the outline of an instance of M26 Cultural Heritage Thing. In the case of physical things, this property describes the physical boundaries of the object. In the case of conceptual objects, this property refers to the boundaries deduced from the interpretation of the carriers of a given concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">R16i is shape of</rdfs:label>
+        <skos:notation>R16i</skos:notation>
+        <skos:prefLabel xml:lang="en">is shape of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R17_has_representation_type -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R17_has_representation_type">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R17i_is_representation_type_of"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">Quantification:
+many to many (0,n:0,n)
+
+Scope note:
+This property allows the categorisation of M1 3D Object instances according to the type of 3D model representation, which should be understood as the intrinsic mathematical/geometrical digital representation. Possible classifications are continuous representation (e.g., NURBS, Bézier, spline) and discrete representation (e.g., mesh, point clouds, voxels), mathematical representation (equations with parameters) and the numerical representation (coordinates), or implicit representation and explicit representation. It should be kept in mind that this class refers to general categories defining the geometric representation method.</rdfs:comment>
+        <rdfs:label xml:lang="en">R17 has representation type</rdfs:label>
+        <skos:notation>R17</skos:notation>
+        <skos:prefLabel xml:lang="en">has representation type</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R17i_is_representation_type_of -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R17i_is_representation_type_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:label xml:lang="en">R17i is representation type of</rdfs:label>
+        <skos:notation>R17i</skos:notation>
+        <skos:prefLabel xml:lang="en">Quantification of the inverse property:
+many to many (0,n:0,n)
+
+Scope note of the inverse property:
+This property allows the categorisation of M1 3D Object instances according to the type of 3D model representation, which should be understood as the intrinsic mathematical/geometrical digital representation. Possible classifications are continuous representation (e.g., NURBS, Bézier, spline) and discrete representation (e.g., mesh, point clouds, voxels), mathematical representation (equations with parameters) and the numerical representation (coordinates), or implicit representation and explicit representation. It should be kept in mind that this class refers to general categories defining the geometric representation method.</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">is representation type of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R18_has_accuracy_value -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R18_has_accuracy_value">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P141_assigned"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R18i_is_accuracy_value_of"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M19_Simulation"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M27_Accuracy_Value"/>
+        <rdfs:comment xml:lang="en">Quantification:
+many to many (0,n:0,n)
+
+Scope note:
+This property indicates the value of accuracy of object simulation in digital space that was assigned to M19 Simulation event.</rdfs:comment>
+        <rdfs:label xml:lang="en">R18 has accuracy value</rdfs:label>
+        <skos:notation>R18</skos:notation>
+        <skos:prefLabel xml:lang="en">has accuracy value</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R18i_is_accuracy_value_of -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R18i_is_accuracy_value_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P141i_was_assigned_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M27_Accuracy_Value"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M19_Simulation"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+many to many (0,n:0,n)
+
+Scope note of the inverse property:
+This property indicates the value of accuracy of object simulation in digital space that was assigned to M19 Simulation event.</rdfs:comment>
+        <rdfs:label xml:lang="en">R18i is accuracy value of</rdfs:label>
+        <skos:notation>R18i</skos:notation>
+        <skos:prefLabel xml:lang="en">is accuracy value of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R1_published -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R1_published">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/L11_had_output"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R1i_was_published_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M5_Digital_Publication_Event"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Quantification: 
+one to many, necessary, dependent (1,n:1,1)
+
+Scope note:
+This property describes the process of a publication of a digital object (picture, document, video, 3D model, etc.) on the web resulting in creation of URI.
+
+In First Order Logic:
+- R1(x,y) ⇒ M5(x)
+- R1(x,y) ⇒ D1(y)
+- R1(x,y) ⇒ L11(x,y)</rdfs:comment>
+        <rdfs:label xml:lang="en">R1 published</rdfs:label>
+        <skos:notation>R1</skos:notation>
+        <skos:prefLabel xml:lang="en">published</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R1i_was_published_by -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R1i_was_published_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M5_Digital_Publication_Event"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:: 
+one to many, necessary, dependent (1,n:1,1)
+
+Scope note of the inverse property::
+This property describes the process of a publication of a digital object (picture, document, video, 3D model, etc.) on the web resulting in creation of URI.
+
+In First Order Logic of the inverse property::
+- R1(x,y) ⇒ M5(x)
+- R1(x,y) ⇒ D1(y)
+- R1(x,y) ⇒ L11(x,y)</rdfs:comment>
+        <rdfs:label xml:lang="en">R1i was published by</rdfs:label>
+        <skos:notation>R1i</skos:notation>
+        <skos:prefLabel xml:lang="en">was published by</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R4_is_preceding_version_of -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R4_is_preceding_version_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R4i_has_preceding_version"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Quantification:
+one to one, necessary (1,1:0,1)
+
+Scope note:
+This property associates two instances of D1 Digital Object, indicating the progression of the state of work on the content they contain. The property allows the progression of work on versions to be tracked in the order in which they occur, pointing to the preceding working state. It can assign only one version the D1 Digital Object, which was a record of the previous work state.</rdfs:comment>
+        <rdfs:label xml:lang="en">R4 is preceding version of</rdfs:label>
+        <skos:notation>R4</skos:notation>
+        <skos:prefLabel xml:lang="en">is preceding version of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R4i_has_preceding_version -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R4i_has_preceding_version">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+one to one, necessary (1,1:0,1)
+
+Scope note of the inverse property:
+This property associates two instances of D1 Digital Object, indicating the progression of the state of work on the content they contain. The property allows the progression of work on versions to be tracked in the order in which they occur, pointing to the preceding working state. It can assign only one version the D1 Digital Object, which was a record of the previous work state.</rdfs:comment>
+        <rdfs:label xml:lang="en">R4i has preceding version</rdfs:label>
+        <skos:notation>R4i</skos:notation>
+        <skos:prefLabel xml:lang="en">has preceding version</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R5_is_following_version_of -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R5_is_following_version_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R5i_has_following_version"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Quantification:
+one to one, necessary (1,1:0,1)
+
+Scope note:
+This property associates two instances of D1 Digital Object, indicating the progression of the state of work on the content they contain. The property allows the progression of work on versions to be tracked in the order in which they occur, pointing directly to the following working state. It can assign only one version preceding it to the D1 Digital Object, which was a record of the following work state.</rdfs:comment>
+        <rdfs:label xml:lang="en">R5 is following version of</rdfs:label>
+        <skos:notation>R5</skos:notation>
+        <skos:prefLabel xml:lang="en">is following version of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R5i_has_following_version -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R5i_has_following_version">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+one to one, necessary (1,1:0,1)
+
+Scope note of the inverse property:
+This property associates two instances of D1 Digital Object, indicating the progression of the state of work on the content they contain. The property allows the progression of work on versions to be tracked in the order in which they occur, pointing to the preceding working state. It can assign only one version the D1 Digital Object, which was a record of the previous work state.</rdfs:comment>
+        <rdfs:label xml:lang="en">R5i has following version</rdfs:label>
+        <skos:notation>R5i</skos:notation>
+        <skos:prefLabel xml:lang="en">has following version</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R6_is_alternation_of -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R6_is_alternation_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R6i_has_alternation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:comment xml:lang="en">Quantification:
+many to many (0,n:0,n)
+
+Scope note:
+This property associates an instance of M1 3D Object with another instance of M1 3D Object that constitutes a variant of the former and that may also be used for identifying results of M25 Digital Reconstruction identified by the former, in suitable contexts, independent from the particular item to be identified. It is important to note that both M1 3D Object depict the same M26 Cultural Heritage Thing in the same E3 Condition State and were prepared based on the same body of knowledge. If the research on the object is progressing and the scope of the starting material for reconstruction has been changed, this should be expressed not by a variant but by creating an entirely new instance of M25 Digital Reconstruction. 
+
+It is a directed relationship where the range expresses the variant and the domain is the source of original form of variation if such a direction can be established. Otherwise, the relationship is symmetric. This property is not transitive. This property is irreflexive.</rdfs:comment>
+        <rdfs:label xml:lang="en">R6 is alternation of</rdfs:label>
+        <skos:notation>R6</skos:notation>
+        <skos:prefLabel xml:lang="en">is alternation of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R6i_has_alternation -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R6i_has_alternation">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+many to many (0,n:0,n)
+
+Scope note of the inverse property:
+This property associates an instance of M1 3D Object with another instance of M1 3D Object that constitutes a variant of the former and that may also be used for identifying results of M25 Digital Reconstruction identified by the former, in suitable contexts, independent from the particular item to be identified. It is important to note that both M1 3D Object depict the same M26 Cultural Heritage Thing in the same E3 Condition State and were prepared based on the same body of knowledge. If the research on the object is progressing and the scope of the starting material for reconstruction has been changed, this should be expressed not by a variant but by creating an entirely new instance of M25 Digital Reconstruction. 
+
+It is a directed relationship where the range expresses the variant and the domain is the source of original form of variation if such a direction can be established. Otherwise, the relationship is symmetric. This property is not transitive. This property is irreflexive.</rdfs:comment>
+        <rdfs:label xml:lang="en">R6i has alternation</rdfs:label>
+        <skos:notation>R6i</skos:notation>
+        <skos:prefLabel xml:lang="en">has alternation</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R7_has_position -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R7_has_position">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R7i_is_position_of"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M18_Digital_Position"/>
+        <rdfs:comment xml:lang="en">Quantification:
+many to many (0,n:0,n)
+
+Scope note:
+This property identifies an instance of M18 Digital Position, which determines the position of an M1 3D Object through a set of coordinates between the centre point of the M17 Digital Environment and the reference point of the 3D object.</rdfs:comment>
+        <rdfs:label xml:lang="en">R7 has position</rdfs:label>
+        <skos:notation>R7</skos:notation>
+        <skos:prefLabel xml:lang="en">has position</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R7i_is_position_of -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R7i_is_position_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M18_Digital_Position"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:label xml:lang="en">R7i is position of</rdfs:label>
+        <skos:notation xml:lang="en">Quantification of the inverse property:
+many to many (0,n:0,n)
+
+Scope note of the inverse property:
+This property identifies an instance of M18 Digital Position, which determines the position of an M1 3D Object through a set of coordinates between the centre point of the M17 Digital Environment and the reference point of the 3D object.</skos:notation>
+        <skos:notation xml:lang="en">R7i</skos:notation>
+        <skos:prefLabel xml:lang="en">is position of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R8_digitally_created -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R8_digitally_created">
+        <rdfs:subPropertyOf rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R24_created"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R8i_was_digitally_created_through"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M5_Digital_Publication_Event"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M6_Digital_Record"/>
+        <rdfs:label xml:lang="en">R8 digitally created</rdfs:label>
+        <skos:notation>R8</skos:notation>
+        <skos:prefLabel xml:lang="en">Quantification:
+one to many, necessary, dependent (1,n:1,1)
+
+Scope note:
+This property associates the instance of M6 Digital Record that was created digitally during a particular instance of M5 Digital Publication Event.</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">digitally created</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R8i_was_digitally_created_through -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R8i_was_digitally_created_through">
+        <rdfs:subPropertyOf rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R24i_was_created_through"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M6_Digital_Record"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M5_Digital_Publication_Event"/>
+        <rdfs:label xml:lang="en">R8i was digitally created through</rdfs:label>
+        <skos:notation xml:lang="en">Quantification of the inverse property:
+one to many, necessary, dependent (1,n:1,1)
+
+Scope note of the inverse property:
+This property associates the instance of M6 Digital Record that was created digitally during a particular instance of M5 Digital Publication Event.</skos:notation>
+        <skos:notation xml:lang="en">R8i</skos:notation>
+        <skos:prefLabel xml:lang="en">was digitally created through</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R9_simulates_feature -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R9_simulates_feature">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type"/>
+        <owl:inverseOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R9i_is_feature_simulated_by"/>
+        <rdfs:domain rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M19_Simulation"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:label xml:lang="en">R9 simulates feature</rdfs:label>
+        <skos:prefLabel xml:lang="en">Quantification:
+one to one, necessary (1,1:0,1)
+
+Scope note:
+This property associates the instance of M19 Simulation with the feature represented by the instance of E55 Type, which is digitally reconstructed on the M1 3D Object. The feature is related to material (E56 Material) or shape (M21 Shape).</skos:prefLabel>
+        <skos:prefLabel>R9</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">simulates feature</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R9i_is_feature_simulated_by -->
+
+    <owl:ObjectProperty rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R9i_is_feature_simulated_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:range rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M19_Simulation"/>
+        <rdfs:comment xml:lang="en">Quantification of the inverse property:
+one to one, necessary (1,1:0,1)
+
+Scope note of the inverse property:
+This property associates the instance of M19 Simulation with the feature represented by the instance of E55 Type, which is digitally reconstructed on the M1 3D Object. The feature is related to material (E56 Material) or shape (M21 Shape).</rdfs:comment>
+        <rdfs:label xml:lang="en">R9i is feature simulated by</rdfs:label>
+        <skos:notation>R9i</skos:notation>
+        <skos:prefLabel xml:lang="en">is feature simulated by</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iflastandards.info/ns/lrm/lrmoo/F2_Expression -->
+
+    <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F30_Manifestation_Creation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing -->
+
+    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing">
+        <rdfs:subClassOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object -->
+
+    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object">
+        <rdfs:subClassOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.cidoc-crm.org/extensions/crmdig/D14_Software -->
+
+    <rdf:Description rdf:about="http://www.cidoc-crm.org/extensions/crmdig/D14_Software">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M14_Research_Project -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M14_Research_Project">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises a series of activities to find answers to scientific questions conducted by instances of E39 Actor, which are most often research institutions or universities. It commonly requires external funding and interdisciplinary consultation. It involves the preparation of adequate documentation of conducted instances of E7 Activities following academic work ethics and their discipline&apos;s internal requirements. The M14 Research Project is always motivated by specific objectives and has predetermined goals to be achieved in a defined E52 Time Span. 
+ 
+Examples:
+-Project (M14) of hypothetical source-based digital 3D reconstruction (M25) of the New Synagogue in Breslau (M26) by AI MAINZ (E39) (https://www.new-synagogue-breslau-3d.hs-mainz.de/)
+-Project (M14) “Computer-based Visualization of Architectural Cultural Heritage (CoVHer)” (E35) co-funded by the Erasmus+ Programme of the European Union (E74) (https://covher.eu/project/)
+-Student seminar (M14) on digital reconstruction (M25) of wooden synagogues (M26) held at the Faculty of Architecture of Warsaw University of Technology (E39) in the summer semester of the academic year 2022/23 (E52)
+
+In First Order Logic:
+- M14(x) ⇒ E7(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M14 Research Project</rdfs:label>
+        <skos:notation>M14</skos:notation>
+        <skos:prefLabel xml:lang="en">Research Project</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M15_3D_Feature -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M15_3D_Feature">
+        <rdfs:subClassOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object"/>
+        <rdfs:label xml:lang="en">M15 3D Feature</rdfs:label>
+        <skos:notation>M15</skos:notation>
+        <skos:prefLabel xml:lang="en">3D Feature</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Scope note:
+This class comprises identifiable features that are digitally attached in an integral way to particular digital objects. M15 Digital Feature refers only to the specific part of an M1 Digital Object, which the physical equivalent would not constitute a separate physical unit. Instances of M15 Digital Feature share many of the attributes of instances of M1 3D Object. They may have a one-, two- or three-dimensional geometric extent. The instances of M15 Digital Feature represent instances of the E26 Physical Feature, which could be observed directly on the E71 Man-Made Thing or its carrier of information (osd31b Source) and which are transferred to the M17 Digital Environment in the process of M25 Digital Reconstruction. 
+The M15 3D Feature consists of two components that simulate the shape of an object (M22 Digital Shape) and a surface finish that simulates reactions of materials to light (M16 Digital Material). In the vast majority of cases, both components have their counterparts, instances of which can exist in the physical world and are defined as E57 Material for surface finishes and M21 Shape for geometric shapes that can be measured and expressed in mathematical coordinates and functions.
+
+Examples:
+-CAD drawing of the profile of the cornice crowning (E26) St. Peter&apos;s Basilica in Rome (M26)
+-Digitally reconstructed proportions of the dome (E26) of the demolished (E3) New Synagogue in Wroclaw (M26)
+-Digital reconstruction of the rosette (E26) of Notre Dame Cathedral (M26)
+
+In First Order Logic:
+- M15(x) ⇒ M1(x)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M16_Digital_Material -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M16_Digital_Material">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class is a specialisation of E55 Type and comprises the concepts of digital representations of E57 Materials. It consists of attributes encoded in a 3D file containing information about the material&apos;s colour, roughness, light emission, reflexivity, or transparency. The material can also be simulated by applying an image (E36, D1) to the surface of an M1 3D Object through an M24 Texture Mapping. Images can affect the surface&apos;s colour and pattern or create the illusion of depth or irregularity.  Connecting several images to represent the same material is possible, but each image will be responsible for simulating a different property of the material&apos;s surface.
+This type is used categorically in the model without reference to instances of it, i.e., the model does not foresee the description of instances of M16 Digital Material, e.g.: “instances of gold”.
+  
+Examples:
+-Old Abandoned Building Wood Plank Flooring PBR Material (M16) #3 for Blender (D14) (https://freepbr.com/materials/old-wooden-flooring-3/) 
+-Seamless (tileable) Dirty Glass PBR Texture (M20) with eight maps (M21): albedo/diffuse, reflection, glossiness, height/displacement, roughness, metalness, ambient occlusion and normal map (https://cgaxis.com/product/dirty-glass-pbr-texture/)
+
+In First Order Logic:
+- M16(x) ⇒ E55(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M16 Digital Material</rdfs:label>
+        <skos:notation>M16</skos:notation>
+        <skos:prefLabel xml:lang="en">Digital Material</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M17_Digital_Environment -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M17_Digital_Environment">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises a 4-dimensional environment in digital spacetime simulation in D14 Software, programmed for creating and displaying instances of M1 3D Objects.  The program associated with 3D models always has an individual coordination system to locate the position of M1 3D Object in digital space. The fourth dimension is a characteristic of animated models only and, in most cases, is not considered. M17 Digital Environment has individual features that affect the perception of the placed M1 3D Object, such as the light or the camera through which the object is observed.
+
+The central point (0,0,0) is an integral part of the M17 Digital Environment. Each M1 3D Object placed in the space has its own M18 Digital Position, which is described in relation to the central point of the space. The object&apos;s position is determined by its pivot, the relative point to which all operations on the 3D object are performed. The pivot should be approximately at the centre of gravity of the object.
+
+Examples:
+-Modelling space (M17) inside the scene of the Blender program (D14)
+-Interaction space (M17) with 3D model (M1) in Sketchfab online repository
+
+In First Order Logic:
+- M17(x) ⇒ D1(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M17 Digital Environment</rdfs:label>
+        <skos:notation>M17</skos:notation>
+        <skos:prefLabel xml:lang="en">Digital Environment</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M18_Digital_Position -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M18_Digital_Position">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises the location of M1 3D Object in digital space expressed by set of E59 Primitive Values that should be implemented with appropriate validation, precision and references to spatial coordinate or relative to central point of M17 Digital Environment. In the same time, it serves as a declaration of E53 Place, but in digital world for M1 3D Object. M18 Digital Position of M1 3D Object may not have anything to do with the location of the actual equivalent of the 3D object in the real world expressed by E53 Place.
+
+Examples:
+x = 4.07625 m, y = 1.00545 m, z = 6.35832 m (in Blender coordination metric system)
+
+In First Order Logic:
+- M18(x) ⇒ D1(x)
+- M18(x) ⇒ E53(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M18 Digital Position</rdfs:label>
+        <skos:notation>M18</skos:notation>
+        <skos:prefLabel xml:lang="en">Digital Position</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M19_Simulation -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M19_Simulation">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D10_Software_Execution"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises events that happen on physical digital devices following a human activity that intentionally caused its immediate or delayed initiation and results in the creation of a virtual 3D representation simulating a certain E3 Condition State of instance of M26 Cultural Heritage Thing. 
+
+The input of a D7 Digital Machine Event is a three-dimensional digital model, an instance of an M1 3D Object in a specified M17 Digital Environment. Due to technological limitations or lack of sufficient source material, it should be borne in mind that M20 Simulation most often does not represent a perfect copy of the simulated object state but is rather an attempt to interpret the output, the end result of which is subject to a certain level of guesswork expressed by the M28 Uncertainty Value. Assumptions regarding the technology limitation can be expressed by the M27 Accuracy Value and limitations to the source material by the M29 Reliability Value.
+
+Examples:
+-Hypothetical realistic simulation (M20) of the reconstruction (M25) of the destroyed (E3) New Synagogue in Wroclaw (M26) via the Sketchfab viewer (M17) (Kuroczyński et al., 2019)
+-Non-photorealistic visualisation (M20) Maison d’un employè, Cité idéale de Chaux by Ledoux (M26) with use of texture projection and procedural mapping (M24) based on original architect drawings (Apollonio et al., 2022)
+
+In First Order Logic:
+- M19(x) ⇒ D10(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M19 Simulation</rdfs:label>
+        <skos:notation>M19</skos:notation>
+        <skos:prefLabel xml:lang="en">Simulation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M1_3D_Object">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises a virtual three-dimensional simulation of E70 Thing of a conceptual or physical nature that can be considered as a single digital unit. M1 3D Object can be described through a set of M15 Digital Features, which simulates their physical equivalents of E26 Physical Feature observed directly on the E70 Thing or its carrier of information (osd31b Source). This class can constitute a collection of points in a virtual space unconnected to each other (point cloud) or connected through lines, curves or planes, which form a specific M23 Digital Shape consisting of M16 Digital Material. 
+
+M1 3D Object can only be visually perceived by E39 Actor within the context of E17 Digital Environment. M1 3D Object, together with M17 Digital Environment, creates a digital spatial or spatiotemporal simulation saved as a file with a specific format (D1 Digital Object). M1 3D Object does not depend on a specific physical carrier and can exist simultaneously on one or more carriers. It can also be transferred to another instance of M17 Digital Environment through a process of D7 Digital Machine Event. However, this process can change its perception due to the differences in geometrical, morphological and materials simulations specifications, which are highly dependent on characteristics of M17 Digital Environment. 
+
+Examples:
+-Manually created (M23) digital 3D model (M1) of hypothetical reconstruction (M25) of heritage object (M26)
+-Raw point cloud (M1) acquired from laser scanning (osd7a)
+-Processed 3D mesh (M1) acquired from the photogrammetry process (osd7a)
+
+
+In First Order Logic:
+- M1(x) ⇒ D1(x)
+- M1(x) ⇒ E36(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M1 3D Object</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">The class is similiar to CRMvr: V8 3D Object (https://github.com/elisabettacaterina/CRMvr)</rdfs:seeAlso>
+        <skos:notation>M1</skos:notation>
+        <skos:prefLabel xml:lang="en">3D Object</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M20_Property_Set -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M20_Property_Set">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises the intrinsic knowledge about how M16 Digital Material representing instances of E57 Material are simulated on surfaces of M1 3D Object. It consists of attributes encoded in a 3D file about the colour, roughness, light emission, reflexivity, transparency or any other property of the material. The material can also be simulated by applying an image (E36, D1) to the surface of a M1 3D Object through a texturing process. Images can affect the colour and pattern of the surface or create the illusion of depth or irregularity on the surface. The method of mapping images to the M15 Digital Feature surface is determined by M24 Texture Mapping.
+
+Examples:
+-Node graph (E73) for material (M16) setup with parameters (E59) in Blender (D14)
+-Material (M16) property manager (E73) setup with parameters (E59) in ArchiCAD (D14)
+
+In First Order Logic:
+- M20(x) ⇒ E73(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M20 Property Set</rdfs:label>
+        <skos:notation>M20</skos:notation>
+        <skos:prefLabel xml:lang="en">Property Set</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M21_Shape -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M21_Shape">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class is a specialisation of E55 Type. It comprises the concepts of shapes and forms of coneptual and physcial things in two- and three-dimensional space. According to Getty Art&amp;Architecture Thesaurus it is the outline, form, or characteristic configuration of an object, including its contours, which define the external form or outer boundary of the object.
+
+Examples:
+-Biforia window shape
+-Cylinder
+-Outline of the city’s skyline
+
+In First Order Logic:
+- M21(x) ⇒ E55(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M21 Shape</rdfs:label>
+        <skos:notation>M21</skos:notation>
+        <skos:prefLabel xml:lang="en">Shape</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M22_Digital_Shape -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M22_Digital_Shape">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class is a specialisation of E55 Type. It comprises the concept of digital interpretations of the M22 Shape. M22 Digital Shape most often does not accurately reflect the actual form of the M21 Shape. Its digital representation adopting certain simplifications allowing an appropriate perception of the target form or shape.
+
+Examples:
+-triangulated mesh of building model
+-segmented arc
+-idealised plan of a historical building based on right angles
+-NURBS-based ideal semisphere
+
+In First Order Logic:
+- M22(x) ⇒ E55(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M22 Digital Shape</rdfs:label>
+        <skos:notation>M22</skos:notation>
+        <skos:prefLabel xml:lang="en">Digital Shape</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M23_3D_Modelling_Technique -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M23_3D_Modelling_Technique">
+        <rdfs:subClassOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/ontology/osd_55p_Technique"/>
+        <rdfs:label xml:lang="en">M23 3D Modelling Technique</rdfs:label>
+        <skos:notation>M23</skos:notation>
+        <skos:notation xml:lang="en">Scope note:
+This class is a specialisation of osd75p Technique . It comprises the classification of activities of constructing the M22 Digital Shape of M1 3D Object (e.g., algorithmic 3D modelling can be used to generate 3D models that are defined with NURBS or mesh representation methods). 
+
+Examples:
+-algorithmic modelling
+-digital sculpting
+-direct hand-made 3D modelling
+-semi-automatic reality-based 3D modelling
+
+In First Order Logic:
+- M23(x) ⇒ osd_55p(x)</skos:notation>
+        <skos:prefLabel xml:lang="en">3D Modelling Technique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M24_Texture_Mapping -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M24_Texture_Mapping">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D10_Software_Execution"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises events by which a digital device runs a series of computing operations on an M1 3D Object as a single task to apply an image to the surfaces of the 3D object to simulate a material. M24 Texture Mapping is predefined by a series of decisions regarding the material properties, texture image selection, and mapping method selection by the human. 
+
+Examples:
+-UV Mapping
+-Planar Mapping
+-Box Mapping
+-Cylinder Mapping
+-Sphere Mapping
+-Node Mapping
+
+In First Order Logic:
+- M24(x) ⇒ D10(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M24 Texture Mapping</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">Mapping methods in 3D modelling are described in more detail in the following article: https://manual.keyshot.com/manual/textures/mapping-types/</rdfs:seeAlso>
+        <skos:notation>M24</skos:notation>
+        <skos:prefLabel xml:lang="en">Texture Mapping</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M25_Digital_Reconstruction -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M25_Digital_Reconstruction">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event"/>
+        <rdfs:subClassOf rdf:resource="https://www.ontscidoc3d.hs-mainz.de/ontology/osd_7a_Research_Activity"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises actions intentionally carried out by instances of E39 Actor that result in digital reconstruction of a specific E3 Condition State of M26 Cultural Heritage Thing as a new instance of M1 3D Object. The reconstruction of a cultural object&apos;s past states is always subject to a certain degree of uncertainty, so M25 Digital Reconstruction can result in multiple instances of the M1 3D Object showing different stages of the reconstruction work or different versions of the final reconstruction.
+This class encompasses not only the process of creating the model itself but all instances of E7 Activities that support this process, such as collecting source materials, digitising source materials, critically analysing the collected materials, or searching for analogies to fill gaps in building knowledge.
+
+Examples:
+-Hypothetical source-based digital 3D reconstruction (M25) of the New Synagogue in Breslau (M26)  as it looked in 1872 (E3) by AI MAINZ (E39) (https://www.new-synagogue-breslau-3d.hs-mainz.de/wisski/navigate/1164/view) 
+-Hypothetical reconstruction (M25) of the church of Santa Margherita in Bologna (M26) by University of Bologna - Department of Architecture (E39), variant as designed by Angelo Venturoli in 1792 (E3) (https://doi.org/10.1007/s00004-023-00707-2)
+-Digital documentation (M25) of Synagogue in Przysucha (M26) through laser scanning (osd7a) in 2022 (E3)
+
+In First Order Logic:
+- M25(x) ⇒ osd_7a(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M25 Digital Reconstruction</rdfs:label>
+        <skos:notation xml:lang="en">M25</skos:notation>
+        <skos:prefLabel xml:lang="en">Digital Reconstruction</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M26_Cultural_Heritage_Thing">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises discrete, identifiable human-made items that hold the legacy of the past generation and are documented as single units. These items are either intellectual products (intangible heritage) or human-made physical things (tangible heritage), characterised by relative stability. M26 Cultural Heritage Thing offers a bridge between the past and the future by applying particular approaches in the present. Due to its attached values for groups or societies inherited from the past, cultural heritage is maintained in the present and bestowed for the benefit of future generations.
+
+Examples:
+-Michelangelo’s David sculpture (E22) 
+-Destroyed (E3) New Synagogue in Wroclaw (E22)
+-Design of never-realized (E3)Volkshalle by Albert Speer (E29)
+-Ruins (E3) of Acropolis of Athens (E22)
+-Treatise on Architecture by Vitruvius (E89)
+
+In First Order Logic:
+- M26(x) ⇒ E71(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M26 Cultural Heritage Thing</rdfs:label>
+        <skos:notation>M26</skos:notation>
+        <skos:prefLabel xml:lang="en">Cultural Heritage Thing</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M27_Accuracy_Value -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M27_Accuracy_Value">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class is a specialisation of E55 Type and comprises the precision of the representation of the M1 3D Object in relation to the collected source materials (osd31b Source) and their provenance used in the M25 Digital Reconstruction process. It can also be understood as the level of detail of the reconstruction and explains what margin of error was assumed by the E39 Actor performing the M25 Digital Reconstruction. It can be expressed in terms of scale (e.g., 1:500). In the case of digital reconstructions based on the process of digitisation, the model&apos;s accuracy corresponds to the measurement accuracy of the M8 Digital Device.
+
+Examples:
+-1:50
+-1 cm
+-0,5 mm
+
+In First Order Logic:
+- M27(x) ⇒ E55(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M27 Accuracy Value</rdfs:label>
+        <skos:notation>M27</skos:notation>
+        <skos:prefLabel xml:lang="en">Accuracy Value</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M28_Uncertainty_Value -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M28_Uncertainty_Value">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class is a specialisation of E55 Type and comprises reconstructed parts of M1 3D Object that are historically uncertain in comparison to its equivalent of M26 Cultural Heritage Thing in certain E3 Condition State that they represent. The more hypothetical the reconstitution, the more its level of uncertainty increases. Due to the subjective value and hypothesis burden, the M28 Uncertainty Value instance should be assigned by using I5 Inference Making expressing fuzziness of logic statements. M28 Uncertainty Value can be expressed as numerical or string value on a specific Uncertainty Scale (I3 Inference Logic), or be calculated by a mathematical formula (I3 Inference Logic) that takes into account the values estimated for different semantic parts of the object. as a percentage value, or through a string indicating the level of uncertainty. 
+
+Examples:
+-“03” (E60) in 5-level uncertainty scale of Irene Cazzaro (I3) for portal reconstruction (M25) of the  Speyer Synagogue (M26) which stands for deduction (E55) (2022, https://doi.org/doi.or/10.48676/unibo/amsdottorato/10817)
+-28% (E60) of uncertainty in digital reconstruction (I5) of Piazza delle Erbe calculated with formula of Average Uncertainty Weighted on the Volume with Relevance factor (AU_VR) (I3) published by Apollonio et al. (2023, https://doi.org/10.3390/heritage7010023)
+-“low” (E59) ) uncertainty value of the reconstruction (I5) of the dome of the New Synagogue in Wroclaw (M26) in a 3-level scale (low-medium-high) (I3) by Kuroczyński et al. (2021, https://doi.org/10.1007/978-3-030-93186-5_2)
+
+In First Order Logic:
+- M28(x) ⇒ E55(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M28 Uncertainty Value</rdfs:label>
+        <skos:notation>M28</skos:notation>
+        <skos:prefLabel xml:lang="en">Uncertainty Value</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M29_Reliability_Value -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M29_Reliability_Value">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class is a specialisation of E55 Type and comprises the degree of confidence and trustworthiness associated with the osd31b Source and credibility associated with the reconstructed scenario or interpretation of historical events. It pertains to the consistency, coherence, and robustness of the reconstructed narrative, evidence, and arguments presented. The correct level of reliability of source materials allows to reduce the value of uncertainty for M25 Digital Reconstruction.
+
+Examples:
+-Inconsistent
+-Damaged
+-Readable
+
+In First Order Logic:
+- M29(x) ⇒ E55(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M29 Reliability Value</rdfs:label>
+        <skos:notation>M29</skos:notation>
+        <skos:prefLabel xml:lang="en">Reliability Value</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M5_Digital_Publication_Event -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M5_Digital_Publication_Event">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises the activities of selecting, arranging and presenting one or more instances of D1 Digital Object available in electronic form on a public network to communicate it to some public audience. This event happens on physical digital devices following a human activity that intentionally caused its immediate or delayed initiation. This results in the creation of an instance of an M6 Digital Record with published instances of a D1 Digital Object on behalf of the human actor.
+
+Examples:
+-Process of publication of a video (D1) titled “Digital Reconstruction – New Synagogue in Breslau” on the Vimeo (https://vimeo.com/417172262)
+-Process of uploading a 3D model of the “Central Part Dome Part (CPDP)” (M1) of the digital reconstruction (M25) of the Synagogue in Breslau (M26) to the public viewer in the Sketchfab Repository (https://sketchfab.com/3d-models/cpdp-4a180e83961147b2bda7541b50ec8a2e) 
+-Process of publication of the article &quot;Digital Reconstruction of the New Synagogue in Breslau: New Approaches to Object-Oriented Research&quot; (E73) by Springer publisher (E39) on the website (https://doi.org/10.1007/978-3-030-93186-5_2)
+
+
+In First Order Logic:
+- M5(x) ⇒ D7(x)
+- M5(x) ⇒ F30(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M5 Digital Publication Event</rdfs:label>
+        <skos:notation>M5</skos:notation>
+        <skos:prefLabel xml:lang="en">Digital Publication Event</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M6_Digital_Record -->
+
+    <owl:Class rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/M6_Digital_Record">
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E31_Document"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises a publicly available and identifiable digital set of items that make propositions about part of reality, constituting a specific subject. M6 Digital Record can be created only as a result of the M5 Digital Publication Event conducted by E39 Actor. Each M6 Digital Record has its own E42 Identifier as a URI web address of a digital resource on the web. The M6 Digital Record includes the published set of D1 Digital Object instances with any metadata, allowing a better understanding of the published resource. The M6 Digital Record is intended to disseminate the resource with first-hand information in a linguistic manner that humans understand. Therefore, it also constitutes an instance of the E33 Linguistic Object.
+
+Examples:
+-Wikipedia Article titled “Nowa Synagoga we Wrocławiu” (E35) in Polish (E56) translation by Wikipedia Editors Community (E39) available at https://pl.wikipedia.org/wiki/Nowa_Synagoga_we_Wroc%C5%82awiu (E42)
+-Record of a protected area &quot;ShUM Sites of Speyer, Worms and Mainz&quot; (E35) on the UNESCO (E39) list in English (E56) available at https://whc.unesco.org/en/list/1636 (E42)
+-Entry &quot;Mainz – Worms – Speyer. Drei mittelalterliche Städte im ZentrumEuropas als Linked Data&quot; (E35) in German (E56) on the AI MAINZ (E39)  website available at https://architekturinstitut.hs-mainz.de/projekte/historische_stadtmodelle_mainz_worms_speyer/ (E42)
+-YouTub-e Video &quot;What was the Role of Synagogues during the Second Temple Period? | Spotlight on History | Synagogues&quot; (E35) in English (E56), published by Bible Discovery TV (E39) available at https://www.youtube.com/watch?v=M_44yS_Fgj4 (E42)
+
+
+In First Order Logic:
+- M6(x) ⇒ D1(x)
+- M6(x) ⇒ E31(x)
+- M6(x) ⇒ E33(x)
+- M6(x) ⇒ F3(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">M6 Digital Record</rdfs:label>
+        <skos:notation>M6</skos:notation>
+        <skos:prefLabel xml:lang="en">Digital Record</skos:prefLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
