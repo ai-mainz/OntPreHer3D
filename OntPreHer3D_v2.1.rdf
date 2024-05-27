@@ -9,7 +9,6 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/">
-        <owl:imports rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/"/>
         <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <owl:imports rdf:resource="http://www.cidoc-crm.org/extensions/crmdig/"/>
         <owl:imports rdf:resource="http://www.cidoc-crm.org/extensions/crminf/"/>
