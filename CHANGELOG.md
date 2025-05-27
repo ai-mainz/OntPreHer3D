@@ -10,7 +10,7 @@ and uses [Semantic Versioning](https://semver.org/).
 ## [Repository Maintenance] – 2025-05-27
 ### Added
 - Created `CHANGELOG.md`, `LICENSE`, and `CONTRIBUTING.md`
-- Structured folders: `ontology/`, `docs/`, `deprecated/`
+- Structured folders: `ontology/`, `docs/`
 - Added CoVHer glossary alignment and EU funding acknowledgment to `README.md`
 - Created full citation, contact, and acknowledgment sections
 
