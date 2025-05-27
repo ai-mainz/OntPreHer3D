@@ -10,7 +10,7 @@ OntPreHer3D is an ontology designed to support the documentation, analysis, and 
 
 OntPreHer3D builds upon and aligns with the following established ontologies:
 
-- [CIDOC CRM 7.1.3 / ECRM 240307](http://www.cidoc-crm.org/cidoc-crm/)
+- [CIDOC CRM 7.1.3](http://www.cidoc-crm.org/cidoc-crm/)
 - [CRMdig 4.0](http://www.cidoc-crm.org/extensions/crmdig/)
 - [CRMinf 1.0](http://www.cidoc-crm.org/extensions/crminf/)
 - [LRMoo 0.9.6](http://iflastandards.info/ns/lrm/lrmoo/)
