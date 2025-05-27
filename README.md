@@ -58,11 +58,11 @@ Development was supported by **Mark Fichtner**, **Peggy Große**, and **Robert N
 
 ## 📁 Repository Structure
 
-ontology/ → All RDF/OWL ontology files (by version)
-docs/ → Documentation, diagrams, and usage examples
-LICENSE.md → CC-BY 4.0 License
-CHANGELOG.md → Log of changes across versions
-CONTRIBUTING.md → Guidelines for collaboration
+ontology/ → All RDF/OWL ontology files (by version) <br>
+docs/ → Documentation, diagrams, and usage examples <br>
+LICENSE.md → CC-BY 4.0 License<br>
+CHANGELOG.md → Log of changes across versions<br>
+CONTRIBUTING.md → Guidelines for collaboration<br>
 
 ---
 
