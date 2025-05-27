@@ -26,6 +26,8 @@ It provides:
 - A semantic framework for tracing the origins, uncertainties, and sources of 3D reconstructions
 - Structures to support transparency and reproducibility in 3D digital heritage workflows
 
+---
+
 ## 🇪🇺 EU Funding Acknowledgment
 
 It also served as a base for semantic repository of hypothetical 3D reconstruction models within the scope of the [**CoVHer – Computer-based Visualization of Architectural Cultural Heritage**](https://covher.eu/) project, funded by the **European Commission** under the **Erasmus+ programme, Key Action 2 (KA2) – Capacity Building in the Field of Higher Education**. The classes and properties developed in OntPreHer3D are aligned with the [CoVHer Glossary](https://covher.eu/glossary/), which reflects a shared conceptual foundation developed by partners of the CoVHer project from:
@@ -36,11 +38,12 @@ It also served as a base for semantic repository of hypothetical 3D reconstructi
 - 🇵🇱 **Warsaw University of Technology** (Poland)
 - 🇪🇸 **Universitat Autònoma de Barcelona**  
   & **La Tempesta: City, Culture & Technology** (Spain)
-- 🇵🇹 **Faculdade de Arquitectura, Universidade do Porto** (Portugal
+- 🇵🇹 **Faculdade de Arquitectura, Universidade do Porto** (Portugal)
 
 ![EU Funding Acknowledgment](https://covher.eu/wp-content/uploads/2022/09/Group-8.png)
 
 The project is co-funded by the Erasmus+ Programme of the European Union. The contents of this ontology and repository are the sole responsibility of the author and do not necessarily reflect the views of the European Commission.
+
 ---
 
 ## 🙏 Acknowledgments
