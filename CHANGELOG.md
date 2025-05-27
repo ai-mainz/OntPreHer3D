@@ -16,6 +16,13 @@ and uses [Semantic Versioning](https://semver.org/).
 
 ### Changed
 - Rewrote `README.md` for clarity and completeness
+- Renamed existing files to follow standardized semantic versioning scheme:
+  - `OntPreHer3D_v1.owl` → `OntPreHer3D 0.9.0.owl`
+  - `OntPreHer3D version 1.0.pdf` → `OntPreHer3D 0.9.0.pdf`
+  - `OntPreHer3D version 2.1.pdf` → `OntPreHer3D 1.0.1.pdf`
+  - `OntPreHer3D_v2.1.rdf` → `OntPreHer3D 1.0.1.rdf`
+- These changes align repository structure with semantic versioning to improve clarity, usability, and consistency across releases.
+- Clarified that version `0.9.0` was a draft with invalid namespace and never officially released.
 
 
 ---
