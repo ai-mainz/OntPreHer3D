@@ -28,7 +28,7 @@ It provides:
 
 ## 🇪🇺 EU Funding Acknowledgment
 
-It also served as a base for semantic repository of hypothetical 3D reconstruction models within the scope of the **CoVHer – Computer-based Visualization of Architectural Cultural Heritage** project, funded by the **European Commission** under the **Erasmus+ programme, Key Action 2 (KA2) – Capacity Building in the Field of Higher Education**. The classes and properties developed in OntPreHer3D are aligned with the [CoVHer Glossary](https://covher.eu/glossary/), which reflects a shared conceptual foundation developed by partners of the CoVHer project from:
+It also served as a base for semantic repository of hypothetical 3D reconstruction models within the scope of the [**CoVHer – Computer-based Visualization of Architectural Cultural Heritage**](https://covher.eu/) project, funded by the **European Commission** under the **Erasmus+ programme, Key Action 2 (KA2) – Capacity Building in the Field of Higher Education**. The classes and properties developed in OntPreHer3D are aligned with the [CoVHer Glossary](https://covher.eu/glossary/), which reflects a shared conceptual foundation developed by partners of the CoVHer project from:
 
 - 🇮🇹 **University of Bologna** (Italy)
 - 🇩🇪 **Hochschule Mainz – University of Applied Sciences**  
