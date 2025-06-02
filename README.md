@@ -4,6 +4,8 @@
 
 OntPreHer3D is an ontology designed to support the documentation, analysis, and publication of 3D digital reconstructions of lost or never-built architectural heritage. It enables structured and semantically rich descriptions of 3D models, their sources, interpretation processes, and preservation context.
 
+Namespace: https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/
+Prefix: oph
 ---
 
 ## 🔗 Compatibility
