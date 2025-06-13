@@ -98,7 +98,7 @@ Bajena, Igor. *Ontology for the Preservation of Cultural Heritage 3D Models (Ont
 
 The development and conceptual framework of this ontology is described in:
 
-Bajena, Igor (2023). *Digital 3D reconstruction as a research environment in art and architecture history. Infrastructure for documentation and publication*. [Dissertation thesis], Alma Mater Studiorum Università di Bologna. Dottorato di ricerca in Architettura e culture del progetto, 37 Ciclo.
+Bajena, Igor (2025). *Digital 3D reconstruction as a research environment in art and architecture history. Infrastructure for documentation and publication*. [Dissertation thesis], Alma Mater Studiorum Università di Bologna. Dottorato di ricerca in Architettura e culture del progetto, 37 Ciclo.
 
 
 ---
