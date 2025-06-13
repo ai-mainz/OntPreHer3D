@@ -29,7 +29,10 @@ and uses [Semantic Versioning](https://semver.org/).
 
 ## [1.0.1] – 2024-05-27 
 ### Removed
-- Removed of LRMoo reference 
+- Removed of LRMoo reference
+  
+### Added
+- Minor ontology updates since version 1.0.0.
 
 ---
 
