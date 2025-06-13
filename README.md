@@ -86,9 +86,20 @@ You are free to share and adapt the material with proper attribution.
 
 ## 📣 Citation
 
-If you use OntPreHer3D in your work, please cite:
+If you use OntPreHer3D in your work, please cite it as:
 
-**Bajena, Igor** (2025). *Digital 3D reconstruction as a research environment in art and architecture history. Infrastructure for documentation and publication*. [Dissertation thesis], Alma Mater Studiorum Università di Bologna. Dottorato di ricerca in Architettura e culture del progetto, 37 Ciclo.
+Bajena, Igor. *Ontology for the Preservation of Cultural Heritage 3D Models (OntPreHer3D)*, Version X.X.X, 20XX. Available at: https://github.com/igorbajena/OntPreHer3D
+
+For example, for version 1.0.1:
+
+Bajena, Igor. *Ontology for the Preservation of Cultural Heritage 3D Models (OntPreHer3D)*, Version 1.0.1, 2024. Available at: https://github.com/igorbajena/OntPreHer3D/releases/tag/v1.0.1
+
+---
+
+The development and conceptual framework of this ontology is described in:
+
+Bajena, Igor (2023). *Digital 3D reconstruction as a research environment in art and architecture history. Infrastructure for documentation and publication*. [Dissertation thesis], Alma Mater Studiorum Università di Bologna. Dottorato di ricerca in Architettura e culture del progetto, 37 Ciclo.
+
 
 ---
 
