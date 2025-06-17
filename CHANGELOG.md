@@ -7,6 +7,19 @@ and uses [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.1] – 2025-06-13
+
+### Added
+- First formal public release of OntPreHer3D ontology version 1.0.1.
+- Uploaded versioned ontology file (`OntPreHer3D 1.0.1.rdf`) and documentation (`OntPreHer3D 1.0.1.pdf`).
+
+
+### Changed
+- Applied semantic versioning to repository structure and filenames.
+- Retrospectively documented previous ontology versions for transparency.
+
+---
+
 ## [Repository Maintenance] – 2025-05-27
 ### Added
 - Created `CHANGELOG.md`, `LICENSE`, and `CONTRIBUTING.md`
@@ -38,7 +51,7 @@ and uses [Semantic Versioning](https://semver.org/).
 
 ## [1.0.0] – 2024-05-03 
 ### Changed
-- First stable public release of OntPreHer3D.
+- First stable non-public release of OntPreHer3D.
 - RDF file with defined namespace.
 - Project documentation in PDF format.
 - Base structure of ontology and semantic alignment with CIDOC CRM, CRMinf, CRMdig, LRMoo, and OntSciDoc3D.
