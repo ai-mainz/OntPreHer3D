@@ -10,7 +10,7 @@ and uses [Semantic Versioning](https://semver.org/).
 ## [1.0.1] – 2025-06-30
 
 ### Added
-- Upload of graphical schemes (on the example of rexonstruction of Speyer Synagogue) to "docs" folder, illustrating:
+- Upload of graphical schemes (on the example of rexonstruction of Speyer Synagogue) to `docs/` folder, illustrating:
   - Classes hierarchy
   - Main documentation triple
   - Documentation scheme of Digital Reconstruction with shortcut property
