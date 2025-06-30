@@ -7,15 +7,16 @@ and uses [Semantic Versioning](https://semver.org/).
 
 ---
 
-## [1.0.1] – 2025-06-30
+## [1.0.2] – 2025-06-30
 
-### Added
+### Documentation
 - Upload of graphical schemes (on the example of rexonstruction of Speyer Synagogue) to `docs/` folder, illustrating:
   - Classes hierarchy
   - Main documentation triple
   - Documentation scheme of Digital Reconstruction with shortcut property
   - Documentation scheme of Digital Reconstrcution through full path and simulation event
   - Documentation scheme of material creation and application to the 3D model
+- No changes were made to classes, properties, or namespaces—this is a purely documentation-only update.
 
 ---
 
