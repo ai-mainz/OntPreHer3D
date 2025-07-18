@@ -15,7 +15,7 @@
         <owl:imports rdf:resource="http://www.cidoc-crm.org/extensions/crminf/"/>
         <owl:imports rdf:resource="https://www.ontscidoc3d.hs-mainz.de/ontology/"/>
         <rdfs:comment xml:lang="en">Changelog: https://github.com/igorbajena/OntPreHer3D/</rdfs:comment>
-        <rdfs:comment xml:lang="en">Ontology for Preservation of Cultural Heritage 3D models (OntPreHer3D) version 2.0
+        <rdfs:comment xml:lang="en">Ontology for Preservation of Cultural Heritage 3D models (OntPreHer3D) version 1.0.1
 
 Compatible with:
 ECRM 211015 (CIDOC CRM 7.1.3.)
