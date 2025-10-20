@@ -14,7 +14,7 @@ and uses [Semantic Versioning](https://semver.org/).
   - ensured every property has either `rdfs:subPropertyOf` or both `domain` and `range`;
   - enforced consistent inverse definitions with `owl:inverseOf` in both directions.
 - Grouped and alphabetically **sorted** all ontology elements for clarity.
-- Added missing inverse and quantification metadata to several properties (`R13`, `R14`, `R15`, `R19–R39`).
+- Added missing inverse and quantification metadata to several all properties.
 - Introduced clean, human-readable comments and scope notes.
 
 ### Changed
