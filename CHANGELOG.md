@@ -5,6 +5,56 @@ All notable changes to OntPreHer3D are documented in this file.
 This changelog follows the format recommended by [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)  
 and uses [Semantic Versioning](https://semver.org/).
 
+## [2.1.0] – 2025-10-20
+
+### Added
+- Introduced one new ontology **class** and one new **object property**, defined both in RDF and PDF documentation.
+- Completed full **structural normalization** of ObjectProperties:
+  - unified annotation order (`rdfs:label`, `skos:notation`, `skos:prefLabel`, `rdfs:comment`, `owl:inverseOf`);
+  - ensured every property has either `rdfs:subPropertyOf` or both `domain` and `range`;
+  - enforced consistent inverse definitions with `owl:inverseOf` in both directions.
+- Grouped and alphabetically **sorted** all ontology elements for clarity.
+- Added missing inverse and quantification metadata to several properties (`R13`, `R14`, `R15`, `R19–R39`).
+- Introduced clean, human-readable comments and scope notes.
+
+### Changed
+- Merged all correction notes from *OntPreHer3D v2 Corrections* (CHANGES.md) into the canonical file.
+- Converted 14 previously misdefined properties (previously in `rdf:Description` blocks) into valid `owl:ObjectProperty` definitions:
+  - R7, R7i  
+  - R12, R12i  
+  - R13, R13i  
+  - R15, R15i  
+  - R22, R22i  
+  - R27, R27i  
+  - R34  
+  - R9i (marked obsolete, replaced by `R10i_is_simulated_by`)
+- Normalized indentation, line endings, and URI consistency across all elements.
+
+### Fixed
+- Resolved namespace consistency issues inherited from v2.0.0.
+- Eliminated redundant or malformed annotation fragments.
+- Verified all inverse relationships, comments, and quantifications are syntactically valid.
+
+### Validation
+- File validated using RDFLib: **no structural errors** detected.
+- Verified all `skos:notation` codes unique and inverses mutually linked.
+
+---
+
+## [2.0.0] – 2025-07-25
+
+### Added
+- Major ontology refactor derived from v1.0.1:
+  - Consolidated ObjectProperties into semantic groups.
+  - Introduced new versioned file `OntPreHer3D_v.2.0.0.owl`.
+- Extended CIDOC CRM / CRMDig / OntSciDoc3D alignment.
+- Introduced several new properties for Digital Reconstruction workflows (R7–R18 family).
+
+### Changed
+- Replaced inconsistent RDF serialization with unified `.owl` file format.
+- Simplified hierarchy and grouped by property domain (Reconstruction, Material, Source, Temporal).
+- Removed deprecated intermediate versions.
+
 ---
 
 ## [1.0.2] – 2025-06-30
