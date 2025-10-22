@@ -5,6 +5,26 @@ All notable changes to OntPreHer3D are documented in this file.
 This changelog follows the format recommended by [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)  
 and uses [Semantic Versioning](https://semver.org/).
 
+## [2.1.1] – 2025-10-22
+
+### Added
+- Introduced new object property **R40 has phase**  
+  (`https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/R40_has_phase`)
+  - Establishes a relationship between **E22 Man-Made Object** and **M69 Phase**, enabling documentation of stylistic, chronological, or developmental stages (e.g., Romanesque, Gothic, Baroque).
+  - **Quantification:** many to many (0,n:0,n)
+  - Supports multi-phase cultural heritage documentation, allowing multiple objects to share a phase and one object to belong to several phases.
+  - Added inverse property **R40i is phase of** for bidirectional reasoning consistency.
+  - Property definition introduced and validated in both the **RDF ontology file** and the **PDF documentation**.
+
+### Fixed
+- Performed structural validation and namespace consistency check following the addition of R40.
+
+### Version context
+- This release expands OntPreHer3D’s conceptual coverage to better represent the temporal and stylistic evolution of physical heritage objects.
+- No backward-incompatible or breaking changes introduced.
+
+---
+
 ## [2.1.0] – 2025-10-20
 
 ### Added
@@ -99,7 +119,6 @@ and uses [Semantic Versioning](https://semver.org/).
   - `OntPreHer3D_v2.1.rdf` → `OntPreHer3D 1.0.1.rdf`
 - These changes align repository structure with semantic versioning to improve clarity, usability, and consistency across releases.
 - Clarified that version `0.9.0` was a draft with invalid namespace and never officially released.
-
 
 ---
 
