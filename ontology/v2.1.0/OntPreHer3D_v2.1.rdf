@@ -10,7 +10,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="https://www.ontscidoc3d.hs-mainz.de/OntPreHer3D/">
         <rdfs:comment xml:lang="en">Changelog: https://github.com/igorbajena/OntPreHer3D/</rdfs:comment>
-        <rdfs:comment xml:lang="en">Ontology for Preservation of Cultural Heritage 3D models (OntPreHer3D) version 1.0.1
+        <rdfs:comment xml:lang="en">Ontology for Preservation of Cultural Heritage 3D models (OntPreHer3D) version 2.1.0
 
 Compatible with:
 CIDOC CRM 7.1.3.
@@ -36,8 +36,8 @@ Development was supported by Mark Fichtner, Peggy Große, and Robert Nasarek, wh
 • Mark Fichtner provided technical guidance and support regarding Linked Open Data principles and helped establish a solid foundation for working with semantic technologies.
 • Peggy Große acted as a mentor throughout the ontology development process, offering continuous conceptual feedback and thorough revisions of the ontology structure.
 • Robert Nasarek, along with the WissKI Community, assisted in resolving technical issues related to the implementation and integration of the ontology.</rdfs:comment>
-               <rdfs:label xml:lang="en">OntPreHer3D version 2.0.0</rdfs:label>
-        <owl:versionInfo>2.0.0</owl:versionInfo>
+               <rdfs:label xml:lang="en">OntPreHer3D version 2.1.0</rdfs:label>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
         <owl:versionInfo xml:lang="en">CRMdig 4.0 (DRAFT) (December, 2022) including references to CIDOC-CRM 7.1.1. Current encoding (February, 2024) references Cidoc-CRM 7.1.3.</owl:versionInfo>
         <owl:versionInfo xml:lang="en">CRMinf 1.2 (DRAFT) (April, 2025) including references to CIDOC-CRM 7.1.2 and CRMsci 3.0</owl:versionInfo>
         <owl:versionInfo xml:lang="en">CRMsci Ontology 3.0 (April, 2025) including references to CIDOC-CRM 7.1.2</owl:versionInfo>
